@@ -1,12 +1,10 @@
 import React from "react";
-import HighlightIcon from "@mui/icons-material/Highlight";
 
 function Header() {
   return (
     <header>
       <h1>
-        <HighlightIcon />
-        Keeper
+        BIT Mesra Forms
       </h1>
     </header>
   );
