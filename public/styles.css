@@ -53,14 +53,12 @@ form.sub-form textarea {
   display: inline-block;
   width: 80%;
   border: none;
-  padding: 4px;
+  padding: 6px;
   outline: none;
   font-size: 1.05em;
   font-family: inherit;
   resize: none;
   background-color: #FAFAFA;
-  padding-top: 5px;
-  padding-bottom: 5px;
 }
 
 /* -------------------------------------------------------- */
