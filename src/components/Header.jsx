@@ -4,7 +4,7 @@ function Header() {
   return (
     <header>
       <h1>
-        BIT Mesra Forms
+        Clinical Information
       </h1>
     </header>
   );

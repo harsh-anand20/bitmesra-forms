@@ -6,6 +6,7 @@
 html {
   font-family: "Montserrat", sans-serif;
 }
+
 body {
   background: #eee;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
@@ -57,33 +58,51 @@ form.sub-form textarea {
   font-size: 1.05em;
   font-family: inherit;
   resize: none;
+  background-color: #FAFAFA;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
-form.sub-form button {
-  position: absolute;
-  right: 18px;
-  bottom: -18px;
-  background: #f5ba13;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  outline: none;
-}
+
 /* -------------------------------------------------------- */
+
 .input-div {
  display: block;
 }
 
 form.sub-form label {
   display: inline-block;
-  width: 110px;
+  width: 200px;
   font-size: 1.1em;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .sub-heading {
   font-size: 1.2em;
   padding-bottom: 10px;
+}
+
+/* Submit Button */
+.submit-button {
+  position: absolute;
+  left: 6%;
+}
+
+/* Radio Buttons */
+form.sub-form .radio-button {
+  padding: 5%;
+  width: 13px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.radio-div {
+  display: inline;
+}
+
+form.sub-form .radio-label {
+  width: 50px;
+  font-size: 1.05em;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }

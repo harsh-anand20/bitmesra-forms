@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import AddIcon from "@mui/icons-material/Add";
-import Fab from "@mui/material/Fab";
+import Button from "@mui/material/Button";
+import Theme from "./Theme";
 
 function FormOne() {
   const [text, setText] = useState({
-    fname: "",
-    lname: "",
-    email: "",
-    dateob: "",
+    name: "",
+    area: "",
   });
 
   function handleChange(event) {
@@ -25,10 +23,8 @@ function FormOne() {
     console.log(text);
 
     setText({
-      fname: "",
-      lname: "",
-      email: "",
-      dateob: "",
+      name: "",
+      area: "",
     });
 
     console.log(text);
@@ -39,54 +35,130 @@ function FormOne() {
   return (
     <div>
       <form className="sub-form">
-        <h4 className="sub-heading">Personal Details / व्यक्तिगत विवरण</h4>
+        <h4 className="sub-heading">
+          Basic details of Patient / मरीज़ का मूल विवरण
+        </h4>
 
         <div className="input-div">
-          <label>First Name: </label>
+          <label>Name: </label>
           <input
-            name="fname"
+            name="name"
+            type="text"
             onChange={handleChange}
-            value={text.fname}
-            placeholder="Enter your First Name."
+            value={text.name}
+            placeholder="Enter Full Name."
+            autoComplete="off"
+            required
           />
         </div>
 
         <div className="input-div">
-          <label>Last Name: </label>
+          <label>Age: </label>
           <input
-            name="lname"
-            onChange={handleChange}
-            value={text.lname}
-            placeholder="Enter your Last Name."
+            name="age"
+            type="number"
+            min="15"
+            max="50"
+            // onChange={}
+            // value={}
+            placeholder="Enter age (15 - 50 Years)."
+            autoComplete="off"
+            required
           />
         </div>
 
         <div className="input-div">
-          <label>Eamil: </label>
+          <label>Area: </label>
           <input
-            name="email"
-            type="email"
+            name="area"
+            type="text"
             onChange={handleChange}
-            value={text.email}
-            placeholder="Enter your Email Address."
+            value={text.area}
+            placeholder="Enter Residence Area."
+            autoComplete="off"
+            required
           />
         </div>
 
         <div className="input-div">
-          <label>DOB: </label>
+          <label>Smoing Habit:</label>
+          <div className="radio-div">
+            <input
+              name="smoking"
+              type="radio"
+              value="yes"
+              className="radio-button"
+            />
+            <label className="radio-label">Yes</label>
+            <input
+              name="smoking"
+              type="radio"
+              value="no"
+              className="radio-button"
+            />
+            <label className="radio-label">No</label>
+          </div>
+        </div>
+
+        <div className="input-div">
+          <label>Alcohol Intake:</label>
+          <div className="radio-div">
+            <input
+              name="alcohol"
+              type="radio"
+              value="yes"
+              className="radio-button"
+            />
+            <label className="radio-label">Yes</label>
+            <input
+              name="alcohol"
+              type="radio"
+              value="no"
+              className="radio-button"
+            />
+            <label className="radio-label">No</label>
+          </div>
+        </div>
+
+        <div className="input-div">
+          <label>Weight: </label>
           <input
-            name="dateob"
-            type="date"
-            onChange={handleChange}
-            value={text.dateob}
-            placeholder="Enter your Date of Birth."
+            name="weight"
+            type="number"
+            min="30"
+            max="300"
+            // onChange={}
+            // value={}
+            placeholder="Enter Weight (in Kgs)."
+            autoComplete="off"
+            required
           />
         </div>
 
-        <Fab onClick={handleClick}>
-          <AddIcon />
-        </Fab>
+        <div className="input-div">
+          <label>Height: </label>
+          <input
+            name="height"
+            type="number"
+            min="30"
+            max="400"
+            // onChange={}
+            // value={}
+            placeholder="Enter Height (in cms)."
+            autoComplete="off"
+            required
+          />
+        </div>
       </form>
+
+      <Button
+        variant="contained"
+        className="submit-button"
+        theme={Theme}
+        onClick={handleClick}
+      >
+        Submit
+      </Button>
     </div>
   );
 }

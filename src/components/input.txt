@@ -1,0 +1,35 @@
+<div className="input-div">
+          <label>Label: </label>
+          <input
+            name=""
+            type=""
+            // onChange={}
+            // value={}
+            placeholder=""
+            autoComplete="off"
+            required
+          />
+        </div>
+
+
+
+
+<div className="input-div">
+  <label>Alcohol Intake:</label>
+  <div className="radio-div">
+    <input
+      name="alcohol"
+      type="radio"
+      value="yes"
+      className="radio-button"
+    />
+    <label className="radio-label">Yes</label>
+    <input
+      name="alcohol"
+      type="radio"
+      value="no"
+      className="radio-button"
+    />
+    <label className="radio-label">No</label>
+  </div>
+</div>
