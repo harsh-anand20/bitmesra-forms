@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Autocomplete from "@mui/material/Autocomplete";
 import Theme from "./Theme";
+
+const options = ["Option 1", "Option 2", "Option 3", "Option 4"];
 
 function FormOne() {
   const [text, setText] = useState({
@@ -64,6 +68,18 @@ function FormOne() {
             placeholder="Enter age (15 - 50 Years)."
             autoComplete="off"
             required
+          />
+        </div>
+
+        <div className="drop-down">
+          <label className="drop-down-label">Area:</label>
+          <Autocomplete
+            disablePortal
+            className="drop-box-input"
+            id="combo-box"
+            options={options}
+            sx={{ width: 4 / 5 }}
+            renderInput={(params) => <TextField {...params} />}
           />
         </div>
 

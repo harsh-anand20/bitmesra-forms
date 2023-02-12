@@ -33,3 +33,15 @@
     <label className="radio-label">No</label>
   </div>
 </div>
+
+<div className="drop-down">
+          <label className="drop-down-label">Area:</label>
+          <Autocomplete
+            disablePortal
+            className="drop-box-input"
+            id="combo-box"
+            options={options}
+            sx={{ width: 4/5 }}
+            renderInput={(params) => <TextField {...params} />}
+          />
+        </div>

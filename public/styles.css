@@ -104,3 +104,29 @@ form.sub-form .radio-label {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+/* Drop Box */
+form.sub-form .drop-box-input {
+  display: inline-block;
+  position: relative;
+  bottom: 4px;
+}
+
+.css-1xwhyjt-MuiAutocomplete-root .MuiOutlinedInput-root {
+  height: 35px;
+}
+
+.css-1xwhyjt-MuiAutocomplete-root .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+  position: relative;
+  bottom: 11px;
+  background-color: #fff;
+}
+
+form.sub-form .drop-down {
+  height: 40px;
+}
+
+form.sub-form .drop-down-label {
+  position: relative;
+  top: 4px;
+}
