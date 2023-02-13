@@ -3,14 +3,10 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import Theme from "./Theme";
-
-const options = ["Option 1", "Option 2", "Option 3", "Option 4"];
+import { formOneAttributes, areaDropDown } from "./Attributes";
 
 function FormOne() {
-  const [text, setText] = useState({
-    name: "",
-    area: "",
-  });
+  const [text, setText] = useState(formOneAttributes);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -26,12 +22,7 @@ function FormOne() {
   function handleClick(event) {
     console.log(text);
 
-    setText({
-      name: "",
-      area: "",
-    });
-
-    console.log(text);
+    // setText(formOneAttributes); // Clears Text Fields
 
     event.preventDefault();
   }
@@ -63,8 +54,8 @@ function FormOne() {
             type="number"
             min="15"
             max="50"
-            // onChange={}
-            // value={}
+            onChange={handleChange}
+            value={text.age}
             placeholder="Enter age (15 - 50 Years)."
             autoComplete="off"
             required
@@ -77,31 +68,41 @@ function FormOne() {
             disablePortal
             className="drop-box-input"
             id="combo-box"
-            options={options}
+            options={areaDropDown}
             sx={{ width: 4 / 5 }}
             renderInput={(params) => <TextField {...params} />}
+            onChange={(event, value) => {
+              setText((prevText) => {
+                return {
+                  ...prevText,
+                  area: value
+                };
+              });
+            }}
           />
         </div>
 
         <div className="input-div">
-          <label>Area: </label>
+          <label>Location: </label>
           <input
-            name="area"
+            name="location"
             type="text"
             onChange={handleChange}
-            value={text.area}
-            placeholder="Enter Residence Area."
+            value={text.location}
+            placeholder="Enter Residence Location."
             autoComplete="off"
             required
           />
         </div>
 
         <div className="input-div">
-          <label>Smoing Habit:</label>
+          <label>Smoking Habit:</label>
           <div className="radio-div">
             <input
               name="smoking"
               type="radio"
+              onChange={handleChange}
+              checked={text.smoking === "yes"}
               value="yes"
               className="radio-button"
             />
@@ -109,6 +110,8 @@ function FormOne() {
             <input
               name="smoking"
               type="radio"
+              onChange={handleChange}
+              checked={text.smoking === "no"}
               value="no"
               className="radio-button"
             />
@@ -122,6 +125,8 @@ function FormOne() {
             <input
               name="alcohol"
               type="radio"
+              onChange={handleChange}
+              checked={text.alcohol === "yes"}
               value="yes"
               className="radio-button"
             />
@@ -129,6 +134,8 @@ function FormOne() {
             <input
               name="alcohol"
               type="radio"
+              onChange={handleChange}
+              checked={text.alcohol === "no"}
               value="no"
               className="radio-button"
             />
@@ -143,8 +150,8 @@ function FormOne() {
             type="number"
             min="30"
             max="300"
-            // onChange={}
-            // value={}
+            onChange={handleChange}
+            value={text.weight}
             placeholder="Enter Weight (in Kgs)."
             autoComplete="off"
             required
@@ -158,8 +165,8 @@ function FormOne() {
             type="number"
             min="30"
             max="400"
-            // onChange={}
-            // value={}
+            onChange={handleChange}
+            value={text.height}
             placeholder="Enter Height (in cms)."
             autoComplete="off"
             required
