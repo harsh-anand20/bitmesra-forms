@@ -51,7 +51,7 @@ form.sub-form {
 form.sub-form input,
 form.sub-form textarea {
   display: inline-block;
-  width: 80%;
+  width: 45%;
   border: none;
   padding: 6px;
   outline: none;
@@ -120,6 +120,10 @@ form.sub-form .drop-box-input {
   position: relative;
   bottom: 11px;
   background-color: #fff;
+}
+
+form.sub-form .css-1xwhyjt-MuiAutocomplete-root {
+  width: 45%;
 }
 
 form.sub-form .drop-down {
