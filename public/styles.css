@@ -59,6 +59,7 @@ form.sub-form textarea {
   font-family: inherit;
   resize: none;
   background-color: #FAFAFA;
+  margin-bottom: 1px;
 }
 
 /* -------------------------------------------------------- */
@@ -69,7 +70,7 @@ form.sub-form textarea {
 
 form.sub-form label {
   display: inline-block;
-  width: 200px;
+  width: 25%;
   font-size: 1.1em;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -81,9 +82,9 @@ form.sub-form label {
 }
 
 /* Submit Button */
-.submit-button {
-  position: absolute;
+.form-one .css-bdlhlj-MuiButtonBase-root-MuiButton-root {
   left: 6%;
+  margin-bottom: 20px;
 }
 
 /* Radio Buttons */
@@ -104,6 +105,7 @@ form.sub-form .radio-label {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+/* Radio Buttons */
 
 /* Drop Box */
 form.sub-form .drop-box-input {
@@ -134,3 +136,4 @@ form.sub-form .drop-down-label {
   position: relative;
   top: 4px;
 }
+/* Drop Box */

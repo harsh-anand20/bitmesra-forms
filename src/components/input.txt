@@ -1,9 +1,10 @@
+TEXT AND NUMBER
 <div className="input-div">
           <label>Label: </label>
           <input
             name=""
             type=""
-            // onChange={}
+            onChange={handleChange}
             // value={}
             placeholder=""
             autoComplete="off"
@@ -12,36 +13,49 @@
         </div>
 
 
-
-
+RADIO
 <div className="input-div">
-  <label>Alcohol Intake:</label>
-  <div className="radio-div">
-    <input
-      name="alcohol"
-      type="radio"
-      value="yes"
-      className="radio-button"
-    />
-    <label className="radio-label">Yes</label>
-    <input
-      name="alcohol"
-      type="radio"
-      value="no"
-      className="radio-button"
-    />
-    <label className="radio-label">No</label>
-  </div>
-</div>
+          <label>Label:</label>
+          <div className="radio-div">
+            <input
+              name="NAME"
+              type="radio"
+              onChange={handleChange}
+              checked={text.NAME === "yes"}
+              value="yes"
+              className="radio-button"
+            />
+            <label className="radio-label">Yes</label>
+            <input
+              name="NAME"
+              type="radio"
+              onChange={handleChange}
+              checked={text.NAME === "no"}
+              value="no"
+              className="radio-button"
+            />
+            <label className="radio-label">No</label>
+          </div>
+        </div>
 
+
+DROPDOWN
 <div className="drop-down">
-          <label className="drop-down-label">Area:</label>
+          <label className="drop-down-label">NAME:</label>
           <Autocomplete
             disablePortal
             className="drop-box-input"
             id="combo-box"
-            options={options}
-            sx={{ width: 4/5 }}
+            options={OPTIONS}
+            sx={{ width: 4 / 5 }}
             renderInput={(params) => <TextField {...params} />}
+            onChange={(event, value) => {
+              setText((prevText) => {
+                return {
+                  ...prevText,
+                  NAME: value
+                };
+              });
+            }}
           />
         </div>
