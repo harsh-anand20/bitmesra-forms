@@ -1,5 +1,5 @@
 const formOneAttributes = {
-  name: "",
+  name: "", // Section 1
   age: "",
   area: "",
   location: "",
@@ -9,7 +9,7 @@ const formOneAttributes = {
   alcohol: "",
   weight: "",
   height: "",
-  caesarean: "",
+  caesarean: "", // Section 2
   complication: "",
   gravida: "",
   parity: "",
@@ -21,6 +21,16 @@ const formOneAttributes = {
   haemoglobin: "",
   fetalHeartRate: "",
   highComplication: "",
+  hiv: "", // Section 3
+  syphilis: "",
+  maleria: "",
+  hepatitisB: "",
+  activePlacita: "", // Section 4
+  labourInduction: "",
+  megasulfIinjection: "",
+  oxytocinInjection: "",
+  antibiotic: "",
+  bloodTransfusion: "",
 };
 
 const areaDropDown = ["Rural Area", "Urban Area"];

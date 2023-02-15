@@ -115,7 +115,7 @@ function FormOne() {
           <Autocomplete
             disablePortal
             className="drop-box-input"
-            id="combo-box2"
+            id="combo-box"
             options={educationDropDown}
             sx={{ width: 4 / 5 }}
             renderInput={(params) => <TextField {...params} />}
@@ -328,7 +328,6 @@ function FormOne() {
             type="date"
             onChange={handleChange}
             value={text.mensuralDate}
-            // placeholder=""
             autoComplete="off"
             required
           />
@@ -342,7 +341,6 @@ function FormOne() {
             type="date"
             onChange={handleChange}
             value={text.expectedDeliveryDate}
-            // placeholder=""
             autoComplete="off"
             required
           />
@@ -435,6 +433,266 @@ function FormOne() {
             placeholder="Enter High Complications if any."
             autoComplete="off"
           />
+        </div>
+      </form>
+
+      {/* SUB FORM 3 */}
+      <form className="sub-form">
+        <h4 className="sub-heading">Tests Required</h4>
+
+        {/* HIV */}
+        <div className="input-div">
+          <label>HIV:</label>
+          <div className="radio-div">
+            <input
+              name="hiv"
+              type="radio"
+              onChange={handleChange}
+              checked={text.hiv === "yes"}
+              value="yes"
+              className="radio-button"
+            />
+            <label className="radio-label">Yes</label>
+            <input
+              name="hiv"
+              type="radio"
+              onChange={handleChange}
+              checked={text.hiv === "no"}
+              value="no"
+              className="radio-button"
+            />
+            <label className="radio-label">No</label>
+          </div>
+        </div>
+
+        {/* SYPHILES */}
+        <div className="input-div">
+          <label>Syphilis:</label>
+          <div className="radio-div">
+            <input
+              name="syphilis"
+              type="radio"
+              onChange={handleChange}
+              checked={text.syphilis === "yes"}
+              value="yes"
+              className="radio-button"
+            />
+            <label className="radio-label">Yes</label>
+            <input
+              name="syphilis"
+              type="radio"
+              onChange={handleChange}
+              checked={text.syphilis === "no"}
+              value="no"
+              className="radio-button"
+            />
+            <label className="radio-label">No</label>
+          </div>
+        </div>
+
+        {/* MALERIA */}
+        <div className="input-div">
+          <label>Maleria:</label>
+          <div className="radio-div">
+            <input
+              name="maleria"
+              type="radio"
+              onChange={handleChange}
+              checked={text.maleria === "yes"}
+              value="yes"
+              className="radio-button"
+            />
+            <label className="radio-label">Yes</label>
+            <input
+              name="maleria"
+              type="radio"
+              onChange={handleChange}
+              checked={text.maleria === "no"}
+              value="no"
+              className="radio-button"
+            />
+            <label className="radio-label">No</label>
+          </div>
+        </div>
+
+        {/* HEPATITIS-B */}
+        <div className="input-div">
+          <label>HepatitisB:</label>
+          <div className="radio-div">
+            <input
+              name="hepatitisB"
+              type="radio"
+              onChange={handleChange}
+              checked={text.hepatitisB === "yes"}
+              value="yes"
+              className="radio-button"
+            />
+            <label className="radio-label">Yes</label>
+            <input
+              name="hepatitisB"
+              type="radio"
+              onChange={handleChange}
+              checked={text.hepatitisB === "no"}
+              value="no"
+              className="radio-button"
+            />
+            <label className="radio-label">No</label>
+          </div>
+        </div>
+      </form>
+
+      {/* SUB FORM 4 */}
+      <form className="sub-form">
+        <h4 className="sub-heading">Information Regarding Injections</h4>
+
+        {/* ACTIVE PLACITA */}
+        <div className="input-div">
+          <label>Active Placita Arrangement:</label>
+          <div className="radio-div">
+            <input
+              name="activePlacita"
+              type="radio"
+              onChange={handleChange}
+              checked={text.activePlacita === "yes"}
+              value="yes"
+              className="radio-button"
+            />
+            <label className="radio-label">Yes</label>
+            <input
+              name="activePlacita"
+              type="radio"
+              onChange={handleChange}
+              checked={text.activePlacita === "no"}
+              value="no"
+              className="radio-button"
+            />
+            <label className="radio-label">No</label>
+          </div>
+        </div>
+
+        {/* LABOUR INDUCTION */}
+        <div className="input-div">
+          <label>Labour Induction:</label>
+          <div className="radio-div">
+            <input
+              name="labourInduction"
+              type="radio"
+              onChange={handleChange}
+              checked={text.labourInduction === "yes"}
+              value="yes"
+              className="radio-button"
+            />
+            <label className="radio-label">Yes</label>
+            <input
+              name="labourInduction"
+              type="radio"
+              onChange={handleChange}
+              checked={text.labourInduction === "no"}
+              value="no"
+              className="radio-button"
+            />
+            <label className="radio-label">No</label>
+          </div>
+        </div>
+
+        {/* MEGASULF INJECTION */}
+        <div className="input-div">
+          <label>Megasulf Injection for Hypertension:</label>
+          <div className="radio-div">
+            <input
+              name="megasulfIinjection"
+              type="radio"
+              onChange={handleChange}
+              checked={text.megasulfIinjection === "yes"}
+              value="yes"
+              className="radio-button"
+            />
+            <label className="radio-label">Yes</label>
+            <input
+              name="megasulfIinjection"
+              type="radio"
+              onChange={handleChange}
+              checked={text.megasulfIinjection === "no"}
+              value="no"
+              className="radio-button"
+            />
+            <label className="radio-label">No</label>
+          </div>
+        </div>
+
+        {/* OXYTOCIN INJECTION */}
+        <div className="input-div">
+          <label>Oxytocin Injection:</label>
+          <div className="radio-div">
+            <input
+              name="oxytocinInjection"
+              type="radio"
+              onChange={handleChange}
+              checked={text.oxytocinInjection === "yes"}
+              value="yes"
+              className="radio-button"
+            />
+            <label className="radio-label">Yes</label>
+            <input
+              name="oxytocinInjection"
+              type="radio"
+              onChange={handleChange}
+              checked={text.oxytocinInjection === "no"}
+              value="no"
+              className="radio-button"
+            />
+            <label className="radio-label">No</label>
+          </div>
+        </div>
+
+        {/* ANTIBIOTIC */}
+        <div className="input-div">
+          <label>Antibiotic:</label>
+          <div className="radio-div">
+            <input
+              name="antibiotic"
+              type="radio"
+              onChange={handleChange}
+              checked={text.antibiotic === "yes"}
+              value="yes"
+              className="radio-button"
+            />
+            <label className="radio-label">Yes</label>
+            <input
+              name="antibiotic"
+              type="radio"
+              onChange={handleChange}
+              checked={text.antibiotic === "no"}
+              value="no"
+              className="radio-button"
+            />
+            <label className="radio-label">No</label>
+          </div>
+        </div>
+
+        {/* BLOOD TRANSFUSION */}
+        <div className="input-div">
+          <label>Blood Transfusion:</label>
+          <div className="radio-div">
+            <input
+              name="bloodTransfusion"
+              type="radio"
+              onChange={handleChange}
+              checked={text.bloodTransfusion === "yes"}
+              value="yes"
+              className="radio-button"
+            />
+            <label className="radio-label">Yes</label>
+            <input
+              name="bloodTransfusion"
+              type="radio"
+              onChange={handleChange}
+              checked={text.bloodTransfusion === "no"}
+              value="no"
+              className="radio-button"
+            />
+            <label className="radio-label">No</label>
+          </div>
         </div>
       </form>
 
