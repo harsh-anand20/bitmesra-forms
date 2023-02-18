@@ -105,6 +105,13 @@ form.sub-form .radio-label {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+form.sub-form .radio-label2 {
+  width: 80px;
+  font-size: 1.05em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 /* Radio Buttons */
 
 /* Drop Box */
@@ -137,3 +144,10 @@ form.sub-form .drop-down-label {
   top: 4px;
 }
 /* Drop Box */
+
+/* Remarks */
+form.sub-form .remarks label {
+  position: relative;
+  bottom: 50px;
+}
+/* Remarks */

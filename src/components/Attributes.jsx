@@ -1,3 +1,5 @@
+// FORM ONE ATTRIBUTES
+
 const formOneAttributes = {
   name: "", // Section 1
   age: "",
@@ -62,6 +64,34 @@ const heartRateDropDown = [
   "160-170",
 ];
 
+// FORM TWO ATTRIBUTES
+
+const formTwoAttributes = {
+  deliveryDateTime: "", // Section 1
+  deliveryType: "",
+  statusOfWomen: "",
+  numberOfDelivery: "",
+  birthType: "",
+  newBornGender: "", // Section 2
+  newBornWeight: "",
+  lowBirthWeight: "",
+  newBornStatus: "",
+  vitaminK1: "", // Section 3
+  BCG: "",
+  OPV: "",
+  hepatitis: "",
+  motherComplication: "", // Section 4
+  newBornComplication: "",
+};
+
+const deliveryTypeDropDown = ["Normal", "LSCS"];
+
+const numberOfDeliveryDropDown = ["1", "2", "more than 2"];
+
+const birthTypeDropDown = ["Preterm", "Non Preterm"];
+
+// EXPORTS
+
 export {
   formOneAttributes,
   areaDropDown,
@@ -69,4 +99,8 @@ export {
   gravidaDropDown,
   parityDropDown,
   heartRateDropDown,
+  formTwoAttributes,
+  deliveryTypeDropDown,
+  numberOfDeliveryDropDown,
+  birthTypeDropDown,
 };

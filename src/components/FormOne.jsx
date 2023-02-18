@@ -68,7 +68,7 @@ function FormOne() {
             max="50"
             onChange={handleChange}
             value={text.age}
-            placeholder="Enter age (15 - 50 Years)."
+            placeholder="Enter Age (15 - 50 Years)."
             autoComplete="off"
             required
           />
