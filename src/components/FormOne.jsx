@@ -36,6 +36,11 @@ function FormOne() {
     event.preventDefault();
   }
 
+  function Print(event) {
+    window.print(); // Prints Window
+    event.preventDefault();
+  }
+
   return (
     <div className="form-one">
       {/* SUB FORM 1 */}
@@ -702,7 +707,16 @@ function FormOne() {
         theme={Theme}
         onClick={handleClick}
       >
-        Submit
+        Submit Form
+      </Button>
+
+      <Button
+        variant="contained"
+        className="submit-button"
+        theme={Theme}
+        onClick={Print}
+      >
+        Print Details
       </Button>
     </div>
   );

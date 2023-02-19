@@ -83,8 +83,9 @@ form.sub-form label {
 
 /* Submit Button */
 .form-one .css-bdlhlj-MuiButtonBase-root-MuiButton-root {
-  left: 6%;
+  left: 5%;
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 /* Radio Buttons */
