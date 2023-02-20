@@ -378,7 +378,7 @@ function FormOne() {
         theme={Theme}
         onClick={handleClick}
       >
-        Submit
+        Submit Form
       </Button>
     </div>
   );

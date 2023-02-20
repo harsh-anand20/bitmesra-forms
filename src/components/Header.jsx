@@ -1,12 +1,14 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 function Header() {
   return (
-    <header>
-      <h1>
-        Clinical Information
-      </h1>
-    </header>
+    <div>
+      <header>
+        <h1>Clinical Information</h1>
+      </header>
+      <Outlet />
+    </div>
   );
 }
 
