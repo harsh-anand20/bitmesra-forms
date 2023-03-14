@@ -5,7 +5,7 @@ function Header() {
   return (
     <div>
       <header>
-        <h1>Clinical Information</h1>
+        <h1>Clinical Information about Pregnant Women</h1>
       </header>
       <Outlet />
     </div>

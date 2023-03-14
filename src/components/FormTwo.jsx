@@ -36,7 +36,9 @@ function FormOne() {
     <div className="form-one">
       {/* SUB FORM 1 */}
       <form className="sub-form">
-        <h4 className="sub-heading">Information Regarding Delivery</h4>
+        <h4 className="sub-heading">
+          Information Regarding Delivery / प्रसव के संबंध में जानकारी
+        </h4>
 
         {/* DELIVERY DATE AND TIME */}
         <div className="input-div">
@@ -142,7 +144,9 @@ function FormOne() {
 
       {/* SUB FORM 2 */}
       <form className="sub-form">
-        <h4 className="sub-heading">Information Realted to Newborn</h4>
+        <h4 className="sub-heading">
+          Information Realted to Newborn / नवजात के संबंध में जानकारी
+        </h4>
 
         {/* GENDER */}
         <div className="input-div">
@@ -238,7 +242,9 @@ function FormOne() {
 
       {/* SUB FORM 3 */}
       <form className="sub-form">
-        <h4 className="sub-heading">Vaccine Required to Newborn</h4>
+        <h4 className="sub-heading">
+          Vaccine Required to Newborn / नवजात के टीके के बारे में जानकारी
+        </h4>
 
         {/* VITAMIN K1 */}
         <div className="input-div">
@@ -343,7 +349,9 @@ function FormOne() {
 
       {/* SUB FORM 4 */}
       <form className="sub-form">
-        <h4 className="sub-heading">Complication After Delivery</h4>
+        <h4 className="sub-heading">
+          Complication After Delivery / प्रसव के बाद जटिलता
+        </h4>
 
         {/* MOTHER */}
         <div className="remarks">

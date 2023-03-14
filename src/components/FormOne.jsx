@@ -242,7 +242,9 @@ function FormOne() {
 
       {/* SUB FORM 2 */}
       <form className="sub-form">
-        <h4 className="sub-heading">Related Information</h4>
+        <h4 className="sub-heading">
+          Pregnancy Related Information / गर्भावस्था संबंधी जानकारी
+        </h4>
 
         {/* PREVIOUS CAESAREAN */}
         <div className="input-div">
@@ -443,7 +445,9 @@ function FormOne() {
 
       {/* SUB FORM 3 */}
       <form className="sub-form">
-        <h4 className="sub-heading">Tests Required</h4>
+        <h4 className="sub-heading">
+          Tests Required for Pregnancy / गर्भावस्था के लिए आवश्यक टेस्ट
+        </h4>
 
         {/* HIV */}
         <div className="input-div">
@@ -548,7 +552,10 @@ function FormOne() {
 
       {/* SUB FORM 4 */}
       <form className="sub-form">
-        <h4 className="sub-heading">Information Regarding Injections</h4>
+        <h4 className="sub-heading">
+          Information Regarding Injections for the Delivery / प्रसव के लिए
+          इंजेक्शन के बारे में जानकारी
+        </h4>
 
         {/* ACTIVE PLACITA */}
         <div className="input-div">
@@ -602,7 +609,7 @@ function FormOne() {
 
         {/* MEGASULF INJECTION */}
         <div className="input-div">
-          <label>Megasulf Injection for Hypertension:</label>
+          <label>Megasulf Injection:</label>
           <div className="radio-div">
             <input
               name="megasulfIinjection"
