@@ -7,6 +7,7 @@ import {
   formOneAttributes,
   areaDropDown,
   educationDropDown,
+  bloodGroupDropDown,
   gravidaDropDown,
   parityDropDown,
   heartRateDropDown,
@@ -15,7 +16,9 @@ import {
 function FormOne() {
   const [text, setText] = useState(formOneAttributes);
 
-  const [expand, setExpand] = useState(false);
+  const [expand1, setExpand1] = useState(false);
+  const [expand2, setExpand2] = useState(false);
+  const [expand3, setExpand3] = useState(false);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -26,6 +29,18 @@ function FormOne() {
         [name]: value,
       };
     });
+
+    if (name === "complication" && value === "yes") {
+      setExpand2(true);
+    } else if (name === "complication" && value === "no") {
+      setExpand2(false);
+    }
+
+    if (name === "highComplication" && value === "yes") {
+      setExpand3(true);
+    } else if (name === "highComplication" && value === "no") {
+      setExpand3(false);
+    }
   }
 
   function handleClick(event) {
@@ -127,9 +142,9 @@ function FormOne() {
             onChange={(event, value) => {
               // Conditional Rendering
               if (value === "Literate") {
-                setExpand(true);
+                setExpand1(true);
               } else {
-                setExpand(false);
+                setExpand1(false);
               }
 
               setText((prevText) => {
@@ -143,7 +158,7 @@ function FormOne() {
         </div>
 
         {/* LEVEL OF EDUCATION (with Conditional Rendering)*/}
-        {expand && (
+        {expand1 && (
           <div className="input-div">
             <label>Level of Education: </label>
             <input
@@ -205,6 +220,27 @@ function FormOne() {
             />
             <label className="radio-label">No</label>
           </div>
+        </div>
+
+        {/* BLOOD GROUP */}
+        <div className="drop-down">
+          <label className="drop-down-label">Bood Group:</label>
+          <Autocomplete
+            disablePortal
+            className="drop-box-input"
+            id="combo-box"
+            options={bloodGroupDropDown}
+            sx={{ width: 4 / 5 }}
+            renderInput={(params) => <TextField {...params} />}
+            onChange={(event, value) => {
+              setText((prevText) => {
+                return {
+                  ...prevText,
+                  bloodGroup: value,
+                };
+              });
+            }}
+          />
         </div>
 
         {/* WEIGHT */}
@@ -273,17 +309,43 @@ function FormOne() {
 
         {/* PREVIOUS COMPLICATION */}
         <div className="input-div">
-          <label>Previous Complication: </label>
-          <input
-            name="complication"
-            type="text"
-            onChange={handleChange}
-            value={text.complication}
-            placeholder="Enter any Previous Complication."
-            autoComplete="off"
-            required
-          />
+          <label>Previous Complication:</label>
+          <div className="radio-div">
+            <input
+              name="complication"
+              type="radio"
+              onChange={handleChange}
+              checked={text.complication === "yes"}
+              value="yes"
+              className="radio-button"
+            />
+            <label className="radio-label">Yes</label>
+            <input
+              name="complication"
+              type="radio"
+              onChange={handleChange}
+              checked={text.complication === "no"}
+              value="no"
+              className="radio-button"
+            />
+            <label className="radio-label">No</label>
+          </div>
         </div>
+
+        {expand2 && (
+          <div className="input-div">
+            <label>Enter Previous Complication: </label>
+            <input
+              name="complicationRemarks"
+              type="text"
+              onChange={handleChange}
+              value={text.complicationRemarks}
+              placeholder="Enter Remarks."
+              autoComplete="off"
+              required
+            />
+          </div>
+        )}
 
         {/* GRAVIDA */}
         <div className="drop-down">
@@ -358,7 +420,9 @@ function FormOne() {
           <label>Gestational Age: </label>
           <input
             name="gestationalAge"
-            type="text"
+            type="number"
+            min="15"
+            max="60"
             onChange={handleChange}
             value={text.gestationalAge}
             placeholder="Enter Gestational Age."
@@ -374,7 +438,8 @@ function FormOne() {
           <label>Systolic: </label>
           <input
             name="systolicBP"
-            type="text"
+            type="number"
+            min="0"
             onChange={handleChange}
             value={text.systolicBP}
             placeholder="Enter Systolic BP."
@@ -385,7 +450,8 @@ function FormOne() {
           <label>Diastolic: </label>
           <input
             name="diastolicBP"
-            type="text"
+            type="number"
+            min="0"
             onChange={handleChange}
             value={text.diastolicBP}
             placeholder="Enter Diastolic BP."
@@ -399,13 +465,39 @@ function FormOne() {
           <label>Haemoglobin: </label>
           <input
             name="haemoglobin"
-            type="text"
+            type="number"
+            min="0"
             onChange={handleChange}
             value={text.haemoglobin}
             placeholder="Enter Haemoglobin Level."
             autoComplete="off"
             required
           />
+        </div>
+
+        {/* HYPERTENSION */}
+        <div className="input-div">
+          <label>Hypertension:</label>
+          <div className="radio-div">
+            <input
+              name="hypertension"
+              type="radio"
+              onChange={handleChange}
+              checked={text.hypertension === "yes"}
+              value="yes"
+              className="radio-button"
+            />
+            <label className="radio-label">Yes</label>
+            <input
+              name="hypertension"
+              type="radio"
+              onChange={handleChange}
+              checked={text.hypertension === "no"}
+              value="no"
+              className="radio-button"
+            />
+            <label className="radio-label">No</label>
+          </div>
         </div>
 
         {/* FETAL HEART RATE */}
@@ -431,16 +523,42 @@ function FormOne() {
 
         {/* HIGH COMPPLICATION */}
         <div className="input-div">
-          <label>High Complication in Current Pregnancy: </label>
-          <input
-            name="highComplication"
-            type="text"
-            onChange={handleChange}
-            value={text.highComplication}
-            placeholder="Enter High Complications if any."
-            autoComplete="off"
-          />
+          <label>High Complication in Current Pregnancy:</label>
+          <div className="radio-div">
+            <input
+              name="highComplication"
+              type="radio"
+              onChange={handleChange}
+              checked={text.highComplication === "yes"}
+              value="yes"
+              className="radio-button"
+            />
+            <label className="radio-label">Yes</label>
+            <input
+              name="highComplication"
+              type="radio"
+              onChange={handleChange}
+              checked={text.highComplication === "no"}
+              value="no"
+              className="radio-button"
+            />
+            <label className="radio-label">No</label>
+          </div>
         </div>
+
+        {expand3 && (
+          <div className="input-div">
+            <label>Enter High Complication: </label>
+            <input
+              name="highComplicationRemarks"
+              type="text"
+              onChange={handleChange}
+              value={text.highComplicationRemarks}
+              placeholder="Enter Remarks."
+              autoComplete="off"
+            />
+          </div>
+        )}
       </form>
 
       {/* SUB FORM 3 */}
@@ -584,7 +702,7 @@ function FormOne() {
 
         {/* LABOUR INDUCTION */}
         <div className="input-div">
-          <label>Labour Induction:</label>
+          <label>Labor Induction:</label>
           <div className="radio-div">
             <input
               name="labourInduction"
@@ -609,7 +727,7 @@ function FormOne() {
 
         {/* MEGASULF INJECTION */}
         <div className="input-div">
-          <label>Megasulf Injection:</label>
+          <label>Megsulf Injection:</label>
           <div className="radio-div">
             <input
               name="megasulfIinjection"

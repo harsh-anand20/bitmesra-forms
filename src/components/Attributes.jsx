@@ -9,10 +9,12 @@ const formOneAttributes = {
   educationLevel: "",
   smoking: "",
   alcohol: "",
+  bloodGroup: "",
   weight: "",
   height: "",
   caesarean: "", // Section 2
   complication: "",
+  complicationRemarks: "",
   gravida: "",
   parity: "",
   mensuralDate: "",
@@ -22,7 +24,9 @@ const formOneAttributes = {
   diastolicBP: "",
   haemoglobin: "",
   fetalHeartRate: "",
+  hypertension: "",
   highComplication: "",
+  highComplicationRemarks: "",
   hiv: "", // Section 3
   syphilis: "",
   maleria: "",
@@ -38,6 +42,8 @@ const formOneAttributes = {
 const areaDropDown = ["Rural Area", "Urban Area"];
 
 const educationDropDown = ["Literate", "Illiterate"];
+
+const bloodGroupDropDown = ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"];
 
 const gravidaDropDown = [
   "G1",
@@ -96,6 +102,7 @@ export {
   formOneAttributes,
   areaDropDown,
   educationDropDown,
+  bloodGroupDropDown,
   gravidaDropDown,
   parityDropDown,
   heartRateDropDown,
