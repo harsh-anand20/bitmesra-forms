@@ -4,7 +4,7 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import Theme from "./Theme";
 import {
-  formOneAttributes,
+  formAttributes,
   areaDropDown,
   educationDropDown,
   bloodGroupDropDown,
@@ -14,7 +14,7 @@ import {
 } from "./Attributes";
 
 function FormOne() {
-  const [text, setText] = useState(formOneAttributes);
+  const [text, setText] = useState(formAttributes);
 
   const [expand1, setExpand1] = useState(false);
   const [expand2, setExpand2] = useState(false);
@@ -46,7 +46,7 @@ function FormOne() {
   function handleClick(event) {
     console.log(text);
 
-    // setText(formOneAttributes); // Clears Text Fields
+    // setText(formAttributes); // Clears Text Fields
 
     event.preventDefault();
   }

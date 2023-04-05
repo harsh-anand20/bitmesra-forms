@@ -4,14 +4,14 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import Theme from "./Theme";
 import {
-  formTwoAttributes,
+  formAttributes,
   deliveryTypeDropDown,
   numberOfDeliveryDropDown,
   birthTypeDropDown,
 } from "./Attributes";
 
 function FormOne() {
-  const [text, setText] = useState(formTwoAttributes);
+  const [text, setText] = useState(formAttributes);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -27,7 +27,7 @@ function FormOne() {
   function handleClick(event) {
     console.log(text);
 
-    // setText(formTwoAttributes); // Clears Text Fields
+    // setText(formAttributes); // Clears Text Fields
 
     event.preventDefault();
   }

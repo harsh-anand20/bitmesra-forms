@@ -178,3 +178,28 @@ div.home-page .home-button {
   width: inherit;
   margin: 20px 10px;
 }
+
+/* -------------------------------------------------------- */
+
+/* SEARCH PAGE */
+.search-page .search-div input {
+  display: inline-block;
+  position: relative;
+  left: 25%;
+  width: 50%;
+  height: 40px;
+  border-width: 0.5px;
+  padding: 6px;
+  font-size: 1.05em;
+  font-family: inherit;
+  resize: none;
+  background-color: #FAFAFA;
+  margin-bottom: 1px;
+  border-radius: 7px;
+}
+
+.search-line {
+  width: 80%;
+  position: relative;
+  left: 10%;
+}

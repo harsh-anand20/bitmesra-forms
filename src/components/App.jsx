@@ -4,6 +4,7 @@ import FormOne from "./FormOne";
 import FormTwo from "./FormTwo";
 import Error from "./Error";
 import Home from "./Home";
+import Search from "./Search";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Header />}>
-          <Route index element={<Home />} />
+          <Route index element={<Search/>} />
+          <Route path="home" element={<Home />} />
           <Route path="form-one" element={<FormOne />} />
           <Route path="form-two" element={<FormTwo />} />
           <Route path="*" element={<Error />} />
