@@ -8,7 +8,7 @@ import {
   deliveryTypeDropDown,
   numberOfDeliveryDropDown,
   birthTypeDropDown,
-} from "./Attributes";
+} from "../Attributes";
 
 function FormOne() {
   const [text, setText] = useState(formAttributes);

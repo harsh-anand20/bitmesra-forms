@@ -14,8 +14,8 @@ function App() {
         <Route path="/" element={<Header />}>
           <Route index element={<Search/>} />
           <Route path="/home/:id" element={<Home />} />
-          <Route path="/form-one" element={<FormOne />} />
-          <Route path="/form-two" element={<FormTwo />} />
+          <Route path="/form-one/:id" element={<FormOne />} />
+          <Route path="/form-two/:id" element={<FormTwo />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>

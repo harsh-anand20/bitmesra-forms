@@ -11,7 +11,7 @@ import {
   gravidaDropDown,
   parityDropDown,
   heartRateDropDown,
-} from "./Attributes";
+} from "../Attributes";
 
 function FormOne() {
   const [text, setText] = useState(formAttributes);

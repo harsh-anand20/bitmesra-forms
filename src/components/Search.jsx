@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import Theme from "./Theme";
 import { useNavigate } from "react-router-dom";
-import fireDB from "./firebase";
-import { formAttributes } from "./Attributes";
+import fireDB from "../firebase";
+import { formAttributes } from "../Attributes";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
