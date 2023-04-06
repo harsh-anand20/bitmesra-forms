@@ -1,6 +1,7 @@
 // FORM ATTRIBUTES
 
 const formAttributes = {
+  searchID: "", // Database ID
   name: "", // Section 1
   age: "",
   area: "",

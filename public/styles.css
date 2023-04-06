@@ -203,3 +203,11 @@ div.home-page .home-button {
   position: relative;
   left: 10%;
 }
+
+.search-heading {
+  width: 80%;
+}
+
+div.search-page .search-button {
+  left: 23%;
+}
