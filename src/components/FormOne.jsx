@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -61,15 +61,15 @@ function FormOne() {
       };
     });
 
-    if (name === "complication" && value === "yes") {
+    if (name === "complication" && value === "Yes") {
       setExpand2(true);
-    } else if (name === "complication" && value === "no") {
+    } else if (name === "complication" && value === "No") {
       setExpand2(false);
     }
 
-    if (name === "highComplication" && value === "yes") {
+    if (name === "highComplication" && value === "Yes") {
       setExpand3(true);
-    } else if (name === "highComplication" && value === "no") {
+    } else if (name === "highComplication" && value === "No") {
       setExpand3(false);
     }
   }
@@ -81,17 +81,12 @@ function FormOne() {
     event.preventDefault();
   }
 
-  function Print(event) {
-    window.print(); // Prints Window
-    event.preventDefault();
-  }
-
   return (
     <div className="form-one">
       {/* SUB FORM 1 */}
       <form className="sub-form">
         <h4 className="sub-heading">
-          Basic details of Patient / मरीज़ का मूल विवरण
+          Basic details of Woman / महिला का मूल विवरण
         </h4>
 
         {/* NAME */}
@@ -210,8 +205,8 @@ function FormOne() {
               name="smoking"
               type="radio"
               onChange={handleChange}
-              checked={text.smoking === "yes"}
-              value="yes"
+              checked={text.smoking === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -219,8 +214,8 @@ function FormOne() {
               name="smoking"
               type="radio"
               onChange={handleChange}
-              checked={text.smoking === "no"}
-              value="no"
+              checked={text.smoking === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -235,8 +230,8 @@ function FormOne() {
               name="alcohol"
               type="radio"
               onChange={handleChange}
-              checked={text.alcohol === "yes"}
-              value="yes"
+              checked={text.alcohol === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -244,8 +239,8 @@ function FormOne() {
               name="alcohol"
               type="radio"
               onChange={handleChange}
-              checked={text.alcohol === "no"}
-              value="no"
+              checked={text.alcohol === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -320,8 +315,8 @@ function FormOne() {
               name="caesarean"
               type="radio"
               onChange={handleChange}
-              checked={text.caesarean === "yes"}
-              value="yes"
+              checked={text.caesarean === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -329,8 +324,8 @@ function FormOne() {
               name="caesarean"
               type="radio"
               onChange={handleChange}
-              checked={text.caesarean === "no"}
-              value="no"
+              checked={text.caesarean === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -345,8 +340,8 @@ function FormOne() {
               name="complication"
               type="radio"
               onChange={handleChange}
-              checked={text.complication === "yes"}
-              value="yes"
+              checked={text.complication === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -354,8 +349,8 @@ function FormOne() {
               name="complication"
               type="radio"
               onChange={handleChange}
-              checked={text.complication === "no"}
-              value="no"
+              checked={text.complication === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -513,8 +508,8 @@ function FormOne() {
               name="hypertension"
               type="radio"
               onChange={handleChange}
-              checked={text.hypertension === "yes"}
-              value="yes"
+              checked={text.hypertension === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -522,8 +517,8 @@ function FormOne() {
               name="hypertension"
               type="radio"
               onChange={handleChange}
-              checked={text.hypertension === "no"}
-              value="no"
+              checked={text.hypertension === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -559,8 +554,8 @@ function FormOne() {
               name="highComplication"
               type="radio"
               onChange={handleChange}
-              checked={text.highComplication === "yes"}
-              value="yes"
+              checked={text.highComplication === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -568,8 +563,8 @@ function FormOne() {
               name="highComplication"
               type="radio"
               onChange={handleChange}
-              checked={text.highComplication === "no"}
-              value="no"
+              checked={text.highComplication === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -605,8 +600,8 @@ function FormOne() {
               name="hiv"
               type="radio"
               onChange={handleChange}
-              checked={text.hiv === "yes"}
-              value="yes"
+              checked={text.hiv === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -614,8 +609,8 @@ function FormOne() {
               name="hiv"
               type="radio"
               onChange={handleChange}
-              checked={text.hiv === "no"}
-              value="no"
+              checked={text.hiv === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -630,8 +625,8 @@ function FormOne() {
               name="syphilis"
               type="radio"
               onChange={handleChange}
-              checked={text.syphilis === "yes"}
-              value="yes"
+              checked={text.syphilis === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -639,8 +634,8 @@ function FormOne() {
               name="syphilis"
               type="radio"
               onChange={handleChange}
-              checked={text.syphilis === "no"}
-              value="no"
+              checked={text.syphilis === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -655,8 +650,8 @@ function FormOne() {
               name="maleria"
               type="radio"
               onChange={handleChange}
-              checked={text.maleria === "yes"}
-              value="yes"
+              checked={text.maleria === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -664,8 +659,8 @@ function FormOne() {
               name="maleria"
               type="radio"
               onChange={handleChange}
-              checked={text.maleria === "no"}
-              value="no"
+              checked={text.maleria === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -680,8 +675,8 @@ function FormOne() {
               name="hepatitisB"
               type="radio"
               onChange={handleChange}
-              checked={text.hepatitisB === "yes"}
-              value="yes"
+              checked={text.hepatitisB === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -689,8 +684,8 @@ function FormOne() {
               name="hepatitisB"
               type="radio"
               onChange={handleChange}
-              checked={text.hepatitisB === "no"}
-              value="no"
+              checked={text.hepatitisB === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -713,8 +708,8 @@ function FormOne() {
               name="activePlacita"
               type="radio"
               onChange={handleChange}
-              checked={text.activePlacita === "yes"}
-              value="yes"
+              checked={text.activePlacita === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -722,8 +717,8 @@ function FormOne() {
               name="activePlacita"
               type="radio"
               onChange={handleChange}
-              checked={text.activePlacita === "no"}
-              value="no"
+              checked={text.activePlacita === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -738,8 +733,8 @@ function FormOne() {
               name="labourInduction"
               type="radio"
               onChange={handleChange}
-              checked={text.labourInduction === "yes"}
-              value="yes"
+              checked={text.labourInduction === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -747,8 +742,8 @@ function FormOne() {
               name="labourInduction"
               type="radio"
               onChange={handleChange}
-              checked={text.labourInduction === "no"}
-              value="no"
+              checked={text.labourInduction === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -763,8 +758,8 @@ function FormOne() {
               name="megasulfIinjection"
               type="radio"
               onChange={handleChange}
-              checked={text.megasulfIinjection === "yes"}
-              value="yes"
+              checked={text.megasulfIinjection === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -772,8 +767,8 @@ function FormOne() {
               name="megasulfIinjection"
               type="radio"
               onChange={handleChange}
-              checked={text.megasulfIinjection === "no"}
-              value="no"
+              checked={text.megasulfIinjection === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -788,8 +783,8 @@ function FormOne() {
               name="oxytocinInjection"
               type="radio"
               onChange={handleChange}
-              checked={text.oxytocinInjection === "yes"}
-              value="yes"
+              checked={text.oxytocinInjection === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -797,8 +792,8 @@ function FormOne() {
               name="oxytocinInjection"
               type="radio"
               onChange={handleChange}
-              checked={text.oxytocinInjection === "no"}
-              value="no"
+              checked={text.oxytocinInjection === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -813,8 +808,8 @@ function FormOne() {
               name="antibiotic"
               type="radio"
               onChange={handleChange}
-              checked={text.antibiotic === "yes"}
-              value="yes"
+              checked={text.antibiotic === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -822,8 +817,8 @@ function FormOne() {
               name="antibiotic"
               type="radio"
               onChange={handleChange}
-              checked={text.antibiotic === "no"}
-              value="no"
+              checked={text.antibiotic === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -838,8 +833,8 @@ function FormOne() {
               name="bloodTransfusion"
               type="radio"
               onChange={handleChange}
-              checked={text.bloodTransfusion === "yes"}
-              value="yes"
+              checked={text.bloodTransfusion === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -847,8 +842,8 @@ function FormOne() {
               name="bloodTransfusion"
               type="radio"
               onChange={handleChange}
-              checked={text.bloodTransfusion === "no"}
-              value="no"
+              checked={text.bloodTransfusion === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -863,15 +858,6 @@ function FormOne() {
         onClick={handleClick}
       >
         Submit Form
-      </Button>
-
-      <Button
-        variant="contained"
-        className="submit-button"
-        theme={Theme}
-        onClick={Print}
-      >
-        Print Details
       </Button>
     </div>
   );

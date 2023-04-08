@@ -228,8 +228,8 @@ function FormOne() {
               name="lowBirthWeight"
               type="radio"
               onChange={handleChange}
-              checked={text.lowBirthWeight === "yes"}
-              value="yes"
+              checked={text.lowBirthWeight === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label2">Yes</label>
@@ -237,8 +237,8 @@ function FormOne() {
               name="lowBirthWeight"
               type="radio"
               onChange={handleChange}
-              checked={text.lowBirthWeight === "no"}
-              value="no"
+              checked={text.lowBirthWeight === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label2">No</label>
@@ -285,8 +285,8 @@ function FormOne() {
               name="vitaminK1"
               type="radio"
               onChange={handleChange}
-              checked={text.vitaminK1 === "yes"}
-              value="yes"
+              checked={text.vitaminK1 === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -294,8 +294,8 @@ function FormOne() {
               name="vitaminK1"
               type="radio"
               onChange={handleChange}
-              checked={text.vitaminK1 === "no"}
-              value="no"
+              checked={text.vitaminK1 === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -310,8 +310,8 @@ function FormOne() {
               name="BCG"
               type="radio"
               onChange={handleChange}
-              checked={text.BCG === "yes"}
-              value="yes"
+              checked={text.BCG === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -319,8 +319,8 @@ function FormOne() {
               name="BCG"
               type="radio"
               onChange={handleChange}
-              checked={text.BCG === "no"}
-              value="no"
+              checked={text.BCG === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -335,8 +335,8 @@ function FormOne() {
               name="OPV"
               type="radio"
               onChange={handleChange}
-              checked={text.OPV === "yes"}
-              value="yes"
+              checked={text.OPV === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -344,8 +344,8 @@ function FormOne() {
               name="OPV"
               type="radio"
               onChange={handleChange}
-              checked={text.OPV === "no"}
-              value="no"
+              checked={text.OPV === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>
@@ -360,8 +360,8 @@ function FormOne() {
               name="hepatitis"
               type="radio"
               onChange={handleChange}
-              checked={text.hepatitis === "yes"}
-              value="yes"
+              checked={text.hepatitis === "Yes"}
+              value="Yes"
               className="radio-button"
             />
             <label className="radio-label">Yes</label>
@@ -369,8 +369,8 @@ function FormOne() {
               name="hepatitis"
               type="radio"
               onChange={handleChange}
-              checked={text.hepatitis === "no"}
-              value="no"
+              checked={text.hepatitis === "No"}
+              value="No"
               className="radio-button"
             />
             <label className="radio-label">No</label>

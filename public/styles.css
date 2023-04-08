@@ -47,6 +47,7 @@ form.sub-form {
   padding: 15px;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
+  padding-left: 50px;
 }
 form.sub-form input,
 form.sub-form textarea {
@@ -211,3 +212,5 @@ div.home-page .home-button {
 div.search-page .search-button {
   left: 23%;
 }
+
+/* DATA PAGES (FORM FILLED AND SUBMITTED) */

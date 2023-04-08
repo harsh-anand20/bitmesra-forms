@@ -53,6 +53,8 @@ const formAttributes = {
   hepatitis: "",
   motherComplication: "", // Section 4
   newBornComplication: "",
+  formOneStatus: false, // Form One Filled?
+  formTwoStatus: false, // Form Two Filled?
 };
 
 const areaDropDown = ["Rural Area", "Urban Area"];
