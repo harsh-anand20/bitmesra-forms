@@ -1,8 +1,7 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import Theme from "./Theme";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function Home() {
   const { id } = useParams();

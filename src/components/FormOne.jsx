@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import Theme from "./Theme";
+import { useParams } from "react-router-dom";
+import fireDB from "../firebase";
 import {
   formAttributes,
   areaDropDown,
@@ -19,6 +21,35 @@ function FormOne() {
   const [expand1, setExpand1] = useState(false);
   const [expand2, setExpand2] = useState(false);
   const [expand3, setExpand3] = useState(false);
+
+  const { id } = useParams();
+
+  function updateDatabase() {
+    fireDB
+      .child("pretermDemo")
+      .orderByChild("searchID")
+      .equalTo(id)
+      .once("value", (snapshot) => {
+        if (snapshot.val() != null) {
+          const key = Object.keys(snapshot.val())[0];
+          const updatedText = {};
+          Object.keys(text).forEach((key) => {
+            if (text[key] !== "") {
+              updatedText[key] = text[key];
+            }
+          });
+          fireDB.child(`pretermDemo/${key}`).update(updatedText, (error) => {
+            if (error) {
+              console.log(error);
+            } else {
+              console.log("Data saved successfully!");
+            }
+          });
+        } else {
+          console.log(`No data found for searchID: ${id}`);
+        }
+      });
+  }
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -45,8 +76,7 @@ function FormOne() {
 
   function handleClick(event) {
     console.log(text);
-
-    // setText(formAttributes); // Clears Text Fields
+    updateDatabase();
 
     event.preventDefault();
   }
