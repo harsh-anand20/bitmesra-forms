@@ -33,13 +33,9 @@ function Search() {
   function handleSearch() {
     const { lowerLimit, upperLimit } = data[0];
     if (searchID >= lowerLimit && searchID <= upperLimit) {
-      console.log(searchID);
-      console.log(lowerLimit);
-      console.log(upperLimit);
       toast.success("Record Found!");
       setTimeout(() => navigate(`/home/${searchID}`), 6000);
     } else {
-      console.log("Error!");
       toast.error("No Record Found!");
     }
   }

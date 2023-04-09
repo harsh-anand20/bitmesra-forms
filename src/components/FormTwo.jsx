@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import Theme from "./Theme";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import fireDB from "../firebase";
 import {
   formAttributes,
@@ -16,6 +16,8 @@ function FormOne() {
   const [text, setText] = useState(formAttributes);
 
   const { id } = useParams();
+
+  const navigate = useNavigate();
 
   function updateDatabase() {
     fireDB
@@ -31,6 +33,7 @@ function FormOne() {
               updatedText[key] = text[key];
             }
           });
+          updatedText.formTwoStatus = true; // Updates Form Two Status
           fireDB.child(`pretermDemo/${key}`).update(updatedText, (error) => {
             if (error) {
               console.log(error);
@@ -59,6 +62,7 @@ function FormOne() {
   function handleClick(event) {
     console.log(text);
     updateDatabase();
+    setTimeout(() => navigate(`/form-two-data/${id}`), 6000);
 
     event.preventDefault();
   }

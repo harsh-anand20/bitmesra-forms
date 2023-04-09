@@ -175,7 +175,7 @@ div.home-page .home-heading {
 
 div.home-page .home-button {
   position: relative;
-  left: 11%;
+  left: 22%;
   width: inherit;
   margin: 20px 10px;
 }
@@ -214,3 +214,6 @@ div.search-page .search-button {
 }
 
 /* DATA PAGES (FORM FILLED AND SUBMITTED) */
+form.sub-form .data-values-label {
+  margin-left: 2%;
+}
