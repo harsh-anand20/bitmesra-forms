@@ -58,7 +58,7 @@ function Search() {
   }
 
   function pushPretermData(updatedText) {
-    fireDB.child("pretermDemo").push(updatedText, (err) => {
+    fireDB.child("pretermData").push(updatedText, (err) => {
       if (err) {
         console.log(err);
       } else {

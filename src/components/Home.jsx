@@ -9,11 +9,11 @@ import "react-toastify/dist/ReactToastify.css";
 function Home() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [formOneStatus, setFormOneStatus] = useState(false);
-  const [formTwoStatus, setFormTwoStatus] = useState(false);
+  const [formOneStatus, setFormOneStatus] = useState("");
+  const [formTwoStatus, setFormTwoStatus] = useState("");
 
   useEffect(() => {
-    const formsRef = fireDB.child("pretermDemo");
+    const formsRef = fireDB.child("pretermData");
     const query = formsRef.orderByChild("searchID").equalTo(id);
     query.once("value").then((snapshot) => {
       snapshot.forEach((child) => {
@@ -25,17 +25,23 @@ function Home() {
   }, [id]);
 
   function handleFormOneClick() {
-    if (formOneStatus) {
-      setTimeout(() => navigate(`/form-one-data/${id}`), 6000);
+    if (formOneStatus === "Filled") {
+      toast.success("Form Already Submitted!");
+      setTimeout(() => toast.success("Fetching Form One Data!"), 1000);
+      setTimeout(() => navigate(`/form-one-data/${id}`), 7000);
     } else {
+      toast.success("Fetching Form One!");
       setTimeout(() => navigate(`/form-one/${id}`), 6000);
     }
   }
 
   function handleFormTwoClick() {
-    if (formTwoStatus) {
-      setTimeout(() => navigate(`/form-two-data/${id}`), 6000);
+    if (formTwoStatus === "Filled") {
+      toast.success("Form Already Submitted!");
+      setTimeout(() => toast.success("Fetching Form Two Data!"), 1000);
+      setTimeout(() => navigate(`/form-two-data/${id}`), 7000);
     } else {
+      toast.success("Fetching Form Two!");
       setTimeout(() => navigate(`/form-two/${id}`), 6000);
     }
   }
@@ -63,6 +69,7 @@ function Home() {
       >
         Form Two
       </Button>
+      <ToastContainer />
     </div>
   );
 }

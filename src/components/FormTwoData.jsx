@@ -12,7 +12,7 @@ function FormTwoData() {
     const fetchData = async () => {
       try {
         const response = await fireDB
-          .child("pretermDemo")
+          .child("pretermData")
           .orderByChild("searchID")
           .equalTo(id)
           .once("value");

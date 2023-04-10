@@ -5,6 +5,8 @@ import Autocomplete from "@mui/material/Autocomplete";
 import Theme from "./Theme";
 import { useParams, useNavigate } from "react-router-dom";
 import fireDB from "../firebase";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   formAttributes,
   deliveryTypeDropDown,
@@ -21,7 +23,7 @@ function FormOne() {
 
   function updateDatabase() {
     fireDB
-      .child("pretermDemo")
+      .child("pretermData")
       .orderByChild("searchID")
       .equalTo(id)
       .once("value", (snapshot) => {
@@ -33,8 +35,8 @@ function FormOne() {
               updatedText[key] = text[key];
             }
           });
-          updatedText.formTwoStatus = true; // Updates Form Two Status
-          fireDB.child(`pretermDemo/${key}`).update(updatedText, (error) => {
+          updatedText.formTwoStatus = "Filled"; // Updates Form Two Status
+          fireDB.child(`pretermData/${key}`).update(updatedText, (error) => {
             if (error) {
               console.log(error);
             } else {
@@ -60,8 +62,8 @@ function FormOne() {
   }
 
   function handleClick(event) {
-    console.log(text);
     updateDatabase();
+    toast.success("Details Updated!");
     setTimeout(() => navigate(`/form-two-data/${id}`), 6000);
 
     event.preventDefault();
@@ -423,6 +425,7 @@ function FormOne() {
       >
         Submit Form
       </Button>
+      <ToastContainer/>
     </div>
   );
 }
