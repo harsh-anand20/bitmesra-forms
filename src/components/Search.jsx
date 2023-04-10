@@ -97,7 +97,7 @@ function Search() {
           onChange={handleChange}
           value={searchID}
           min="0"
-          placeholder="Enter Search ID."
+          placeholder="Enter Record ID."
           autoComplete="off"
         />
       </div>
