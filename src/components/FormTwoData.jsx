@@ -28,12 +28,19 @@ function FormTwoData() {
 
   function Print(event) {
     window.print(); // Prints Window
-    console.log(data);
     event.preventDefault();
   }
 
   return (
     <div className="form-one">
+      <form className="sub-form">
+        <h4 className="sub-heading">
+          Record Information / रिकॉर्ड से संबंधित जानकारी
+        </h4>
+
+        <label>Record ID:</label>
+        <label className="data-values-label">{data.searchID}</label>
+      </form>
       {/* SUB FORM 1 */}
       <form className="sub-form">
         <h4 className="sub-heading">
@@ -43,31 +50,31 @@ function FormTwoData() {
         {/* DELIVERY DATE AND TIME */}
         <div className="input-div">
           <label>Delivery Date and Time:</label>
-        <label className = "data-values-label">{data.deliveryDateTime}</label>
+          <label className="data-values-label">{data.deliveryDateTime}</label>
         </div>
 
         {/* DELIVERY TYPE */}
         <div className="drop-down">
           <label className="drop-down-label">Delivery Type:</label>
-        <label className = "data-values-label">{data.deliveryType}</label>
+          <label className="data-values-label">{data.deliveryType}</label>
         </div>
 
         {/* STATUS OF WOMEN */}
         <div className="input-div">
           <label>Status of Women after Delivery:</label>
-        <label className = "data-values-label">{data.statusOfWomen}</label>
+          <label className="data-values-label">{data.statusOfWomen}</label>
         </div>
 
         {/* NUMBER OF DELIVERY */}
         <div className="drop-down">
           <label className="drop-down-label">Number of Delivery:</label>
-        <label className = "data-values-label">{data.numberOfDelivery}</label>
+          <label className="data-values-label">{data.numberOfDelivery}</label>
         </div>
 
         {/* BIRTH TYPE */}
         <div className="drop-down">
           <label className="drop-down-label">Birth Type:</label>
-        <label className = "data-values-label">{data.birthType}</label>
+          <label className="data-values-label">{data.birthType}</label>
         </div>
       </form>
 
@@ -80,25 +87,25 @@ function FormTwoData() {
         {/* GENDER */}
         <div className="input-div">
           <label>Gender:</label>
-        <label className = "data-values-label">{data.newBornGender}</label>
+          <label className="data-values-label">{data.newBornGender}</label>
         </div>
 
         {/* WEIGHT OF NEWBORN */}
         <div className="input-div">
           <label>Weight of Newborn: </label>
-        <label className = "data-values-label">{data.newBornWeight}</label>
+          <label className="data-values-label">{data.newBornWeight}</label>
         </div>
 
         {/* LOW BIRTH WEIGHT */}
         <div className="input-div">
           <label>Low Birth Weight:</label>
-        <label className = "data-values-label">{data.lowBirthWeight}</label>
+          <label className="data-values-label">{data.lowBirthWeight}</label>
         </div>
 
         {/* STATUS OF NEWBORN */}
         <div className="input-div">
           <label>Status of Newborn:</label>
-        <label className = "data-values-label">{data.newBornStatus}</label>
+          <label className="data-values-label">{data.newBornStatus}</label>
         </div>
       </form>
 
@@ -111,25 +118,25 @@ function FormTwoData() {
         {/* VITAMIN K1 */}
         <div className="input-div">
           <label>Vitamin K1:</label>
-        <label className = "data-values-label">{data.vitaminK1}</label>
+          <label className="data-values-label">{data.vitaminK1}</label>
         </div>
 
         {/* BCG */}
         <div className="input-div">
           <label>BCG:</label>
-        <label className = "data-values-label">{data.BCG}</label>
+          <label className="data-values-label">{data.BCG}</label>
         </div>
 
         {/* OPV */}
         <div className="input-div">
           <label>OPV:</label>
-        <label className = "data-values-label">{data.OPV}</label>
+          <label className="data-values-label">{data.OPV}</label>
         </div>
 
         {/* HEPATITIS */}
         <div className="input-div">
           <label>Hepatitis:</label>
-        <label className = "data-values-label">{data.hepatitis}</label>
+          <label className="data-values-label">{data.hepatitis}</label>
         </div>
       </form>
 
@@ -142,13 +149,15 @@ function FormTwoData() {
         {/* MOTHER */}
         <div className="input-div">
           <label>Mother: </label>
-        <label className = "data-values-label">{data.motherComplication}</label>
+          <label className="data-values-label">{data.motherComplication}</label>
         </div>
 
         {/* NEW BORN */}
         <div className="input-div">
           <label>New Born: </label>
-        <label className = "data-values-label">{data.newBornComplication}</label>
+          <label className="data-values-label">
+            {data.newBornComplication}
+          </label>
         </div>
       </form>
 

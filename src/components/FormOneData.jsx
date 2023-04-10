@@ -26,15 +26,22 @@ function FormOneData() {
     fetchData();
   }, [id]);
 
-
   function Print(event) {
     window.print(); // Prints Window
-    console.log(data);
     event.preventDefault();
   }
 
   return (
     <div className="form-one-data">
+      <form className="sub-form">
+        <h4 className="sub-heading">
+          Record Information / रिकॉर्ड से संबंधित जानकारी
+        </h4>
+
+        <label>Record ID:</label>
+        <label className="data-values-label">{data.searchID}</label>
+      </form>
+
       {/* SUB FORM 1 */}
       <form className="sub-form">
         <h4 className="sub-heading">
@@ -45,67 +52,67 @@ function FormOneData() {
         <div className="input-div">
           <label>Name: </label>
 
-          <label className = "data-values-label">{data.name}</label>
+          <label className="data-values-label">{data.name}</label>
         </div>
 
         {/* AGE */}
         <div className="input-div">
           <label>Age: </label>
-          <label className = "data-values-label">{data.age}</label>
+          <label className="data-values-label">{data.age}</label>
         </div>
 
         {/* AREA */}
         <div className="drop-down">
           <label className="drop-down-label">Area:</label>
-          <label className = "data-values-label">{data.area}</label>
+          <label className="data-values-label">{data.area}</label>
         </div>
 
         {/* LOCATION */}
         <div className="input-div">
           <label>Location: </label>
-          <label className = "data-values-label">{data.location}</label>
+          <label className="data-values-label">{data.location}</label>
         </div>
 
         {/* EDUCATION */}
         <div className="drop-down">
           <label className="drop-down-label">Education:</label>
-          <label className = "data-values-label">{data.education}</label>
+          <label className="data-values-label">{data.education}</label>
         </div>
 
         {/* LEVEL OF EDUCATION (with Conditional Rendering)*/}
         <div className="input-div">
           <label>Level of Education: </label>
-          <label className = "data-values-label">{data.educationLevel}</label>
+          <label className="data-values-label">{data.educationLevel}</label>
         </div>
 
         {/* SMOKING HABIT */}
         <div className="input-div">
           <label>Smoking Habit:</label>
-          <label className = "data-values-label">{data.smoking}</label>
+          <label className="data-values-label">{data.smoking}</label>
         </div>
 
         {/* ALCOHOL INTAKE */}
         <div className="input-div">
           <label>Alcohol Intake:</label>
-          <label className = "data-values-label">{data.alcohol}</label>
+          <label className="data-values-label">{data.alcohol}</label>
         </div>
 
         {/* BLOOD GROUP */}
         <div className="drop-down">
           <label className="drop-down-label">Bood Group:</label>
-          <label className = "data-values-label">{data.bloodGroup}</label>
+          <label className="data-values-label">{data.bloodGroup}</label>
         </div>
 
         {/* WEIGHT */}
         <div className="input-div">
           <label>Weight: </label>
-          <label className = "data-values-label">{data.weight}</label>
+          <label className="data-values-label">{data.weight}</label>
         </div>
 
         {/* HEIGHT */}
         <div className="input-div">
           <label>Height: </label>
-          <label className = "data-values-label">{data.height}</label>
+          <label className="data-values-label">{data.height}</label>
         </div>
       </form>
 
@@ -118,43 +125,45 @@ function FormOneData() {
         {/* PREVIOUS CAESAREAN */}
         <div className="input-div">
           <label>Previous Caesarean:</label>
-          <label className = "data-values-label">{data.caesarean}</label>
+          <label className="data-values-label">{data.caesarean}</label>
         </div>
 
         {/* PREVIOUS COMPLICATION */}
         <div className="input-div">
           <label>Previous Complication:</label>
-          <label className = "data-values-label">{data.complication}</label>
+          <label className="data-values-label">{data.complication}</label>
         </div>
 
         {/* GRAVIDA */}
         <div className="drop-down">
           <label className="drop-down-label">Gravida:</label>
-          <label className = "data-values-label">{data.gravida}</label>
+          <label className="data-values-label">{data.gravida}</label>
         </div>
 
         {/* PARITY */}
         <div className="drop-down">
           <label className="drop-down-label">Parity:</label>
-          <label className = "data-values-label">{data.parity}</label>
+          <label className="data-values-label">{data.parity}</label>
         </div>
 
         {/* LAST MENSURAL DATE */}
         <div className="input-div">
           <label>Last Mensural Date: </label>
-          <label className = "data-values-label">{data.mensuralDate}</label>
+          <label className="data-values-label">{data.mensuralDate}</label>
         </div>
 
         {/* EXPECTED DELIVERY DATE */}
         <div className="input-div">
           <label>Expected Delivery Date: </label>
-          <label className = "data-values-label">{data.expectedDeliveryDate}</label>
+          <label className="data-values-label">
+            {data.expectedDeliveryDate}
+          </label>
         </div>
 
         {/* GESTATIONAL AGE */}
         <div className="input-div">
           <label>Gestational Age: </label>
-          <label className = "data-values-label">{data.gestationalAge}</label>
+          <label className="data-values-label">{data.gestationalAge}</label>
         </div>
 
         {/* BLOOD PRESSURE */}
@@ -162,35 +171,35 @@ function FormOneData() {
           <label>Blood Pressure: </label>
           <br />
           <label>Systolic: </label>
-          <label className = "data-values-label">{data.systolicBP}</label>
+          <label className="data-values-label">{data.systolicBP}</label>
 
           <br />
           <label>Diastolic: </label>
-          <label className = "data-values-label">{data.diastolicBP}</label>
+          <label className="data-values-label">{data.diastolicBP}</label>
         </div>
 
         {/* HAEMOGLOBIN */}
         <div className="input-div">
           <label>Haemoglobin: </label>
-          <label className = "data-values-label">{data.haemoglobin}</label>
+          <label className="data-values-label">{data.haemoglobin}</label>
         </div>
 
         {/* HYPERTENSION */}
         <div className="input-div">
           <label>Hypertension:</label>
-          <label className = "data-values-label">{data.hypertension}</label>
+          <label className="data-values-label">{data.hypertension}</label>
         </div>
 
         {/* FETAL HEART RATE */}
         <div className="drop-down">
           <label className="drop-down-label">Fetal Heart Rate:</label>
-          <label className = "data-values-label">{data.fetalHeartRate}</label>
+          <label className="data-values-label">{data.fetalHeartRate}</label>
         </div>
 
         {/* HIGH COMPPLICATION */}
         <div className="input-div">
           <label>High Complication in Current Pregnancy:</label>
-          <label className = "data-values-label">{data.highComplication}</label>
+          <label className="data-values-label">{data.highComplication}</label>
         </div>
       </form>
 
@@ -203,25 +212,25 @@ function FormOneData() {
         {/* HIV */}
         <div className="input-div">
           <label>HIV:</label>
-          <label className = "data-values-label">{data.hiv}</label>
+          <label className="data-values-label">{data.hiv}</label>
         </div>
 
         {/* SYPHILES */}
         <div className="input-div">
           <label>Syphilis:</label>
-          <label className = "data-values-label">{data.syphilis}</label>
+          <label className="data-values-label">{data.syphilis}</label>
         </div>
 
         {/* MALERIA */}
         <div className="input-div">
           <label>Maleria:</label>
-          <label className = "data-values-label">{data.maleria}</label>
+          <label className="data-values-label">{data.maleria}</label>
         </div>
 
         {/* HEPATITIS-B */}
         <div className="input-div">
           <label>HepatitisB:</label>
-          <label className = "data-values-label">{data.hepatitisB}</label>
+          <label className="data-values-label">{data.hepatitisB}</label>
         </div>
       </form>
 
@@ -235,37 +244,37 @@ function FormOneData() {
         {/* ACTIVE PLACITA */}
         <div className="input-div">
           <label>Active Placita Arrangement:</label>
-          <label className = "data-values-label">{data.activePlacita}</label>
+          <label className="data-values-label">{data.activePlacita}</label>
         </div>
 
         {/* LABOUR INDUCTION */}
         <div className="input-div">
           <label>Labor Induction:</label>
-          <label className = "data-values-label">{data.labourInduction}</label>
+          <label className="data-values-label">{data.labourInduction}</label>
         </div>
 
         {/* MEGASULF INJECTION */}
         <div className="input-div">
           <label>Megsulf Injection:</label>
-          <label className = "data-values-label">{data.megasulfIinjection}</label>
+          <label className="data-values-label">{data.megasulfIinjection}</label>
         </div>
 
         {/* OXYTOCIN INJECTION */}
         <div className="input-div">
           <label>Oxytocin Injection:</label>
-          <label className = "data-values-label">{data.oxytocinInjection}</label>
+          <label className="data-values-label">{data.oxytocinInjection}</label>
         </div>
 
         {/* ANTIBIOTIC */}
         <div className="input-div">
           <label>Antibiotic:</label>
-          <label className = "data-values-label">{data.antibiotic}</label>
+          <label className="data-values-label">{data.antibiotic}</label>
         </div>
 
         {/* BLOOD TRANSFUSION */}
         <div className="input-div">
           <label>Blood Transfusion:</label>
-          <label className = "data-values-label">{data.bloodTransfusion}</label>
+          <label className="data-values-label">{data.bloodTransfusion}</label>
         </div>
       </form>
 
