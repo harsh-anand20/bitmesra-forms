@@ -83,11 +83,11 @@ form.sub-form label {
 }
 
 /* Submit Button */
-.form-one .css-1ksp3ka-MuiButtonBase-root-MuiButton-root {
+/* .form-one .css-1ksp3ka-MuiButtonBase-root-MuiButton-root {
   left: 5%;
   margin-bottom: 20px;
   margin-left: 20px;
-}
+} */
 
 /* Radio Buttons */
 form.sub-form .radio-button {
@@ -123,7 +123,7 @@ form.sub-form .drop-box-input {
   bottom: 4px;
 }
 
-.css-1xwhyjt-MuiAutocomplete-root .MuiOutlinedInput-root {
+/* .css-1xwhyjt-MuiAutocomplete-root .MuiOutlinedInput-root {
   height: 35px;
 }
 
@@ -135,7 +135,7 @@ form.sub-form .drop-box-input {
 
 form.sub-form .css-1xwhyjt-MuiAutocomplete-root {
   width: 45%;
-}
+} */
 
 form.sub-form .drop-down {
   height: 40px;

@@ -98,7 +98,20 @@ function FormOne() {
             className="drop-box-input"
             id="combo-box"
             options={deliveryTypeDropDown}
-            sx={{ width: 4 / 5 }}
+            sx={{
+              width: 9 / 20,
+              "& .MuiOutlinedInput-root": {
+                height: "35px",
+              },
+              "& .MuiAutocomplete-inputRoot .MuiAutocomplete-input": {
+                position: "relative",
+                bottom: "11px",
+                backgroundColor: "#fff",
+              },
+              "& form.sub-form .css-1xwhyjt-MuiAutocomplete-root": {
+                width: "80%",
+              },
+            }}
             renderInput={(params) => <TextField {...params} />}
             onChange={(event, value) => {
               setText((prevText) => {
@@ -144,7 +157,20 @@ function FormOne() {
             className="drop-box-input"
             id="combo-box"
             options={numberOfDeliveryDropDown}
-            sx={{ width: 4 / 5 }}
+            sx={{
+              width: 9 / 20,
+              "& .MuiOutlinedInput-root": {
+                height: "35px",
+              },
+              "& .MuiAutocomplete-inputRoot .MuiAutocomplete-input": {
+                position: "relative",
+                bottom: "11px",
+                backgroundColor: "#fff",
+              },
+              "& form.sub-form .css-1xwhyjt-MuiAutocomplete-root": {
+                width: "80%",
+              },
+            }}
             renderInput={(params) => <TextField {...params} />}
             onChange={(event, value) => {
               setText((prevText) => {
@@ -165,7 +191,20 @@ function FormOne() {
             className="drop-box-input"
             id="combo-box"
             options={birthTypeDropDown}
-            sx={{ width: 4 / 5 }}
+            sx={{
+              width: 9 / 20,
+              "& .MuiOutlinedInput-root": {
+                height: "35px",
+              },
+              "& .MuiAutocomplete-inputRoot .MuiAutocomplete-input": {
+                position: "relative",
+                bottom: "11px",
+                backgroundColor: "#fff",
+              },
+              "& form.sub-form .css-1xwhyjt-MuiAutocomplete-root": {
+                width: "80%",
+              },
+            }}
             renderInput={(params) => <TextField {...params} />}
             onChange={(event, value) => {
               setText((prevText) => {
@@ -422,6 +461,7 @@ function FormOne() {
         className="submit-button"
         theme={Theme}
         onClick={handleClick}
+        style={{ left: "5%", marginBottom: "20px", marginLeft: "20px"}}
       >
         Submit Form
       </Button>
