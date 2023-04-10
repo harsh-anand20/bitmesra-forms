@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import Theme from "./Theme";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import fireDB from "../firebase";
 
 function FormOneData() {
@@ -287,6 +287,17 @@ function FormOneData() {
       >
         Print Details
       </Button>
+
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <Button
+          variant="contained"
+          className="submit-button print-button"
+          theme={Theme}
+          style={{ position: "relative", left: "8%", marginBottom: "25px" }}
+        >
+          Home Page
+        </Button>
+      </Link>
     </div>
   );
 }
