@@ -89,6 +89,15 @@ function FormOne() {
 
   return (
     <div className="form-one">
+      <form className="sub-form">
+        <h4 className="sub-heading">
+          Record Information / रिकॉर्ड से संबंधित जानकारी
+        </h4>
+
+        <label>Record ID:</label>
+        <label className="data-values-label">{id}</label>
+      </form>
+
       {/* SUB FORM 1 */}
       <form className="sub-form">
         <h4 className="sub-heading">

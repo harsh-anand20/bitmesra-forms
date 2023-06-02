@@ -49,7 +49,6 @@ function FormOne() {
       });
   }
 
-
   function handleChange(event) {
     const { name, value } = event.target;
 
@@ -71,6 +70,15 @@ function FormOne() {
 
   return (
     <div className="form-one">
+      <form className="sub-form">
+        <h4 className="sub-heading">
+          Record Information / रिकॉर्ड से संबंधित जानकारी
+        </h4>
+
+        <label>Record ID:</label>
+        <label className="data-values-label">{id}</label>
+      </form>
+
       {/* SUB FORM 1 */}
       <form className="sub-form">
         <h4 className="sub-heading">
@@ -461,11 +469,11 @@ function FormOne() {
         className="submit-button"
         theme={Theme}
         onClick={handleClick}
-        style={{ left: "5%", marginBottom: "20px", marginLeft: "20px"}}
+        style={{ left: "5%", marginBottom: "20px", marginLeft: "20px" }}
       >
         Submit Form
       </Button>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 }
